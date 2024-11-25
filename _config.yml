@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "2016.JPG"
+  avatar           : "2016-2.JPG"
   name             : "Shenlu Wang"
   pronouns         : # example: "she/her"  
   bio              : "Senior Research Engineer"
