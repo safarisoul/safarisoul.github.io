@@ -21,7 +21,7 @@ repository               : "safarisoul/safarisoul.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "2016-2.jpg"
   name             : "Shenlu Wang"
   pronouns         : # example: "she/her"  
   bio              : "Senior Research Engineer"
