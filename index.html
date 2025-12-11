@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+    <style>
+        /* 页面整体样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #74ABE2, #5563DE);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* 标题动画 */
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        /* 副标题动画 */
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            animation: fadeIn 3s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* 小屏幕自适应 */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div>
+        <h1>Hello World!</h1>
+        <p>Welcome to my GitHub page.</p>
+    </div>
 </body>
 </html>
