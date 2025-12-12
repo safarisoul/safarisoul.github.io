@@ -88,7 +88,43 @@
             border-bottom: 2px solid #6c5b7b;
         }
 
-        /* 小屏幕自适应 */
+        /* About Section */
+        .about-section {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+            animation: fadeIn 1.4s ease forwards;
+            opacity: 0;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            color: #6c5b7b;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            white-space: pre-line; /* 以后你写多行也能保留换行 */
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% { 
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 小屏幕自适应 *//* 手机优化 */
         @media (max-width: 600px) {
             .header {
                 flex-direction: column;
@@ -103,6 +139,14 @@
             nav {
                 padding: 10px 20px;
                 gap: 24px;
+            }
+            
+            .about-section h2 {
+                font-size: 1.7rem;
+            }
+            
+            .about-text {
+                font-size: 1.1rem;
             }
         }
 
@@ -166,6 +210,12 @@
             }
         });
     </script>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p class="about-text">Hi, I'm Shenlu.</p>
+    </section>
 
     <div style="padding: 40px; text-align:center; font-size:1.4rem; color:#6c5b7b;">
         hello world 🌿  
