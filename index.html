@@ -35,6 +35,7 @@
             padding: 18px 40px;
             background: linear-gradient(135deg, #CFE8FF, #D9F3EE);
             border-bottom: 1px solid #e0e6ea;
+            flex-wrap: wrap; /* 允许换行 */
         }
 
         /* Title 文案 */
@@ -45,6 +46,13 @@
             letter-spacing: 0.5px;
         }
 
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 0;
+        }
+
         /* Social icon区域 */
         .social-links a {
             margin-left: 16px;
@@ -53,6 +61,7 @@
             font-size: 1.2rem;
             transition: 0.2s ease;
         }
+        
         .social-links a:hover {
             opacity: 0.7;
         }
@@ -128,12 +137,19 @@
         @media (max-width: 600px) {
             .header {
                 flex-direction: column;
-                align-items: flex-start;
+                /*align-items: flex-start;*/
+                align-items: center;    /* 居中 */
                 padding: 16px 20px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                text-align: center;
             }
 
             .social-links {
                 margin-top: 8px;
+                justify-content: center; /* 居中显示 */
             }
 
             nav {
@@ -214,7 +230,7 @@
     <!-- About Me Section -->
     <section id="about" class="about-section">
         <h2>About Me</h2>
-        <p class="about-text">Hi, I'm Shenlu.</p>
+        <p class="about-text">Hi, I'm Shenlu (safarisoul).</p>
     </section>
 
     <div style="padding: 40px; text-align:center; font-size:1.4rem; color:#6c5b7b;">
