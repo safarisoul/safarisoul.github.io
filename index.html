@@ -6,20 +6,6 @@
     <title>safarisoul</title>
     <style>
         /* 页面整体样式 */
-        /*
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #74ABE2, #5563DE);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            text-align: center;
-        }*/
-
         body {
             margin: 0;
             font-family: "Segoe UI", "Helvetica Neue", sans-serif;
@@ -44,28 +30,6 @@
             font-weight: 600;
             color: #355c7d;
             letter-spacing: 0.5px;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 12px;
-            overflow-x: auto;   /* 超出宽度时可水平滚动 */
-            white-space: nowrap; 
-            margin-top: 0;
-        }
-
-        /* Social icon区域 */
-        .social-links a {
-            margin-left: 16px;
-            text-decoration: none;
-            color: #355c7d;
-            font-size: 1.2rem;
-            transition: 0.2s ease;
-        }
-        
-        .social-links a:hover {
-            opacity: 0.7;
         }
 
         /* Navigation Bar */
@@ -129,8 +93,6 @@
             margin: 80px auto;
             padding: 0 20px;
             text-align: center;
-            animation: fadeIn 1.4s ease forwards;
-            opacity: 0;
         }
 
         .contact-section h2 {
@@ -140,17 +102,24 @@
             font-weight: 600;
         }
 
-        .contact-section a {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: #4a4a4a;
+        .contact-section .social-links {
+            display: flex;
+            justify-content: center; /* 居中 */
+            gap: 20px;               /* 间距 */
+            flex-wrap: wrap;          /* 手机端换行 */
+            margin-top: 10px;
         }
 
-        .contact-text {
+        .contact-section .social-links a {
             font-size: 1.25rem;
-            line-height: 1.8;
-            color: #4a4a4a;
-            white-space: pre-line; /* 以后你写多行也能保留换行 */
+            color: #355c7d;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .contact-section .social-links a:hover {
+            color: #6c5b7b;
+            transform: translateY(-1px);
         }
 
         /* Fade-in animation */
@@ -179,12 +148,6 @@
                 text-align: center;
             }
 
-            .social-links {
-                margin-top: 8px;
-                font-size: 0.9rem; /* 原来是1.2rem，调小一点 */
-                justify-content: center; /* 居中显示 */
-            }
-
             nav {
                 padding: 10px 20px;
                 gap: 24px;
@@ -202,51 +165,16 @@
                 font-size: 1.7rem;
             }
             
-            .contact-section a {
+            .contact-section .social-links a {
                 font-size: 1.1rem;
             }
         }
-
-        /* 标题动画 */
-        /*h1 {
-            font-size: 4rem;
-            margin: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-            opacity: 0;
-        }*/
-
-        /* 副标题动画 */
-        /*p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            animation: fadeIn 3s ease-in-out forwards;
-            opacity: 0;
-        }*/
-
-        /* 动画效果 */
-        /*@keyframes fadeIn {
-            to { opacity: 1; }
-        }*/
-
-        /* 小屏幕自适应 */
-        /*@media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            p { font-size: 1rem; }
-        }*/
     </style>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
         <div class="title">Shenlu Wang</div>
-
-        <!--
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/shenluwang/" target="_blank">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=BeDgjf8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-            <a href="https://codeforces.com/profile/safarisoul" target="_blank">Codeforces</a>
-        </div>
-        -->
     </div>
     
     <!-- Navigation -->
@@ -271,17 +199,13 @@
 
     <!-- About Me Section -->
     <section id="about" class="about-section">
-        <h2>About Me</h2>
+        <h2>🌿 About Me 🌿</h2>
         <p class="about-text">Hi, I'm Shenlu, sometimes known as safarisoul.</p>
     </section>
 
-    <div style="padding: 40px; text-align:center; font-size:1.4rem; color:#6c5b7b;">
-        hello world 🌿  
-        <br><br>
-    </div>
-
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2>Contact</h2>
+        <h2>🌿 Contact 🌿</h2>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/shenluwang/" target="_blank">LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=BeDgjf8AAAAJ&hl=en" target="_blank">Google Scholar</a>
