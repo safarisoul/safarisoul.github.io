@@ -60,7 +60,7 @@
         /* Navigation Bar */
         nav {
             background: #ffffffaa;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(6px);
             padding: 12px 40px;
             display: flex;
             justify-content: center;
@@ -73,11 +73,19 @@
             font-size: 1.05rem;
             color: #355c7d;
             font-weight: 500;
-            transition: 0.2s;
+            transition: 0.25s ease;
+            padding-bottom: 4px;
         }
 
         nav a:hover {
             color: #6c5b7b;
+            transform: translateY(-1px);
+        }
+
+        /* Active: 当前页面高亮（颜色更柔、底部小线条） */
+        nav a.active {
+            color: #6c5b7b;
+            border-bottom: 2px solid #6c5b7b;
         }
 
         /* 小屏幕自适应 */
@@ -141,9 +149,23 @@
     
     <!-- Navigation -->
     <nav>
-        <a href="https://safarisoul.github.io/">Home</a>
-        <a href="#tbd">TBD</a>
+        <a href="https://safarisoul.github.io/" class="nav-link" id="home-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#notes" class="nav-link">Notes</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </nav>
+
+    <script>
+        // 自动高亮当前导航链接
+        const currentURL = window.location.href;
+        const links = document.querySelectorAll(".nav-link");
+
+        links.forEach(link => {
+            if (currentURL === link.href) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 
     <div style="padding: 40px; text-align:center; font-size:1.4rem; color:#6c5b7b;">
         hello world 🌿  
