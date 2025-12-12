@@ -6,6 +6,7 @@
     <title>safarisoul</title>
     <style>
         /* 页面整体样式 */
+        /*
         body {
             margin: 0;
             padding: 0;
@@ -17,39 +18,137 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
             text-align: center;
-        }
+        }*/
 
-        /* 标题动画 */
-        h1 {
-            font-size: 4rem;
+        body {
             margin: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-            opacity: 0;
+            font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+            background: #f8f9fb; /* 柔和背景 */
+            color: #333;
+        }
+        
+        /* 顶部Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #CFE8FF, #D9F3EE);
+            border-bottom: 1px solid #e0e6ea;
         }
 
-        /* 副标题动画 */
-        p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            animation: fadeIn 3s ease-in-out forwards;
-            opacity: 0;
+        /* Title 文案 */
+        .title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #355c7d;
+            letter-spacing: 0.5px;
         }
 
-        /* 动画效果 */
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        /* Social icon区域 */
+        .social-links a {
+            margin-left: 16px;
+            text-decoration: none;
+            color: #355c7d;
+            font-size: 1.2rem;
+            transition: 0.2s ease;
+        }
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #ffffffaa;
+            backdrop-filter: blur(5px);
+            padding: 12px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-bottom: 1px solid #e0e6ea;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.05rem;
+            color: #355c7d;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #6c5b7b;
         }
 
         /* 小屏幕自适应 */
         @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 20px;
+            }
+
+            .social-links {
+                margin-top: 8px;
+            }
+
+            nav {
+                padding: 10px 20px;
+                gap: 24px;
+            }
+        }
+
+        /* 标题动画 */
+        /*h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+        }*/
+
+        /* 副标题动画 */
+        /*p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            animation: fadeIn 3s ease-in-out forwards;
+            opacity: 0;
+        }*/
+
+        /* 动画效果 */
+        /*@keyframes fadeIn {
+            to { opacity: 1; }
+        }*/
+
+        /* 小屏幕自适应 */
+        /*@media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
             p { font-size: 1rem; }
-        }
+        }*/
     </style>
 </head>
 <body>
-    <div>
-        <h1>Shenlu Wang</h1>
+    <!-- Header -->
+    <div class="header">
+        <div class="title">Shenlu Wang</div>
+
+        <div class="social-links">
+            <!-- 可以换成你自己的 -->
+            <a href="https://www.linkedin.com/in/shenluwang/" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=BeDgjf8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a href="https://codeforces.com/profile/safarisoul" target="_blank">Codeforces</a>
+        </div>
     </div>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#tbd">TBD</a>
+    </nav>
+
+    <div style="padding: 40px; text-align:center; font-size:1.4rem; color:#6c5b7b;">
+        hello world 🌿  
+        <br><br>
+    </div>
+    
 </body>
 </html>
